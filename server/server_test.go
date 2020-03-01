@@ -15,7 +15,7 @@ func Test_start(t *testing.T) {
 			t.Fatalf("can't start server: %v", err)
 		}
 	}()
-	time.Sleep(1_000_000_000)
+	time.Sleep(time.Second*2)
 	conn, err := net.Dial("tcp", "localhost:9999")
 	if err != nil {
 		t.Fatalf("can't connect to server: %v", err)
